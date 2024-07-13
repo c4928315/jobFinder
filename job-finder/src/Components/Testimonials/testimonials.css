@@ -1,8 +1,10 @@
 .testimonaialCarousel{
-    background-color: var(--light-blue);
-    height:450px;
+    background-color: white;
+    height: 80vh;
     width: 100%;
     margin-top: 80px;
+    position: relative;
+    padding: 0 3em;
 }
 
 
@@ -11,8 +13,8 @@
 }  
 
 .testimonialImage{
-    width: 60px;
-    height: 60px;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
@@ -40,38 +42,41 @@
 }
 
 .topDecor{
-    margin-bottom: 30px;
-    color: #202124;
-    font-size: 29px;
-    font-weight: 400;
+    margin-bottom: 0px;
+    color:  #b48e41;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-.topDecor p{
-    
-}
+
 
 .userTestimony{
     margin-bottom: 30px;
-    color: var(--light-gray);
+    color: var(--jungle-green);
     letter-spacing: 0.03em;
-    font-size: 17px;
+    font-size: 2em;
+    font-family: 'Trirong', serif;
+    font-weight: 400 !important;
 }
 
 .testimonyContent{
-    padding: 100px;
-    padding-top: 90px;
+   
 }
 
 .userName{
     text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: 100;
     letter-spacing: 0.04em;
-    color: var(--secondary-text);
+    color: black;
+    align-items: center;
     margin: 0;
-    width: 100%;
+    width: fit-content;
     display: flex;
     justify-content: left;
+    font-family: sans-serif;
+   font-style: italic;
+   font-size: 1em; 
 }
 .occupation{
     letter-spacing: 0.04em;
@@ -83,6 +88,10 @@
 
 .nameAndPosition{
     height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    color: black;
 }
 
 .btnDiasabled{
@@ -97,12 +106,12 @@
 }
 
 .carousel-indicators [data-bs-target] {
-    background-color: var(--light-gray) !important;
+    background-color: var(--jungle-green) !important;
 }
 
 .testimonyActive .active{
     border-radius: 50% !important;
-    background-color: black !important;
+    background-color: #b48e41 !important;
     padding: 0 !important;
     width: 12px !important;
     height: 12px !important;
@@ -110,11 +119,13 @@
 
 
 .testimonaialCarousel .carousel-indicators{
-    margin-bottom: 40px !important;
+    margin-bottom: 3.5em !important;
+    position: absolute;
+    left: -90%;
 }
 
 .testimonyItem{
-    height:550px !important; 
+    height:fit-content !important; 
 }
 
 .newUserTestimonyFlex{
@@ -126,9 +137,127 @@
     justify-content: center;
 }
 
+.testimonyDiv1, .testimonyDiv2{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+.testimonyDiv1{
+    margin-bottom: 2em;
+}
+
+.testimonyDiv2{
+    margin-top: 2em;
+}
+
+.testimonyDivInner{
+    height: 5em;
+    width: 2px;
+    background-color: #b48e41;
+}
+
 @media screen and (min-width: 320px) and (max-width: 736px) {
     .subscribeNewsLetter{
         width: 90%;
         margin: 0 auto;
+    }
+
+    .userTestimony{
+        font-size: 0.6em;
+    }
+
+    .topDecor p{
+        font-size: 0.8em;
+        margin: 0;
+        margin-bottom: 0 !important;
+        width: 100%;
+        font-weight: 600;
+    }
+
+    .topDecor{
+        margin-bottom: 0 !important;
+        width: 100%;
+    }
+
+    .testimonyContent{
+        padding: 5%;
+    }
+
+    .testimonaialCarousel{
+        height: 42vh;
+    }
+    
+    .testimonialImage{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .userName{
+        font-size: 0.8em;
+    }
+
+    .occupation{
+        font-size: 0.7em;
+    }
+
+    .testimonaialCarousel .carousel-indicators{
+        margin-bottom: 1.2em !important;
+    }
+
+    .testimonyItem{
+        height: fit-content !important;
+    }
+
+    .newsLetterHeader h1{
+        font-size: 1em;
+        font-weight: 600;
+        align-items: center;
+    }
+
+    .newsLetterSubHeader p{
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+    
+    .newsLetterInner{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subscribeNewsLetterBtn button{
+        width: 14em !important;
+        height: 2.3em !important;
+    }
+    
+    .subscribeNewsLetterArea input, .subscribeNewsLetter{
+        height: 2em !important;
+    }
+
+    .testimonyDivInner{
+        height: 2.5em;
+    }
+
+    .testimonyDiv1{
+        margin-bottom: 0;
+    }
+
+    .testimonyDiv2{
+        margin-top: 0;
+    }
+
+    .testimonaialCarousel{
+        margin-top: 1em;
+    }
+
+    .quote{
+        font-size: 0.5em;
+    }
+
+    .testimonaialCarousel .carousel-indicators{
+        left: -70%;
     }
   }

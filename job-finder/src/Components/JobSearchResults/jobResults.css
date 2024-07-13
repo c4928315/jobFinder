@@ -4,16 +4,27 @@
 }
 
 .jobResultsTopNavTitle{
-    font-weight: 100;
+    font-weight: 400;
     font-size: 28px;
+    color: white;
+    font-family: 'Trirong', serif;
+    text-transform: capitalize;
 }
 
 .jobResultsTopNav p, .jobResultsTopNav a{
     margin: 0;
-    font-size: 14px;
+    font-size: 0.8em;
     font-weight: lighter;
     text-decoration: none;
-    color: black;
+    color: white !important;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+
+.jobResultsTopNav p{
+    color: var(--jungle-green) !important;
 }
 
 .jobResultsTopNavHome{
@@ -26,10 +37,15 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    color: var(--blue);
+}
+
+.jobResultsTopNav svg{
+    color: white !important;;
 }
 
 .jobResultsTop{
-    background-color: var(--light-blue);
+    background-color: var(--light-jungle-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,10 +56,18 @@
 .jobResultsBottom{
     display: flex;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     gap: 50px;
     padding: 50px 30px;
     position: relative;
+    padding-bottom: 50px;
+}
+
+.nojobsPhrase{
+    position: absolute !important;
+    width: 65%;
+    top: 0;
+    right: 0;
 }
 
 .jobResultsBottomLeft{
@@ -52,6 +76,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 15%;
+  
 }
 
 
@@ -64,23 +89,46 @@
     margin-bottom: 10px;
     font-size: 19px;
     font-weight: 500;
+    color: var(--jungle-green);
 }
 
 .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
-    width: 100%;
-    border: 1px solid var(--secondary-text-thin);
+    width: 90%;
+    border: none;
     border-radius: 1.3vh !important;
     height: 50px !important;
     padding-left: 3%;
     font-size: 15px !important;
     color: var(--light-gray);
+    font-style: italic !important;
 }
+
+.jobResultsBottomInputContainer .formInputResultsContainer input:focus, .jobResultsBottomInputContainer .formInputResultsContainer select:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;;
+}
+
+.jobResultsIcon{
+    width: 10%;
+    color: var(--jungle-green);
+}
+
 
 .jobResultsBottomInputContainer input::placeholder{
     color: black !important;
     font-size: 15px !important;
     color: var(--light-gray) !important;
+    color: var(--blue) !important;
 }
+
+.jobResultsBottomInputContainer select{
+    color: black !important;
+    font-size: 15px !important;
+    color: var(--light-gray) !important;
+    color: var(--blue) !important;
+}
+
 
 .jobResultsBottomRight{
     width: 70%;
@@ -94,7 +142,7 @@
     border: none;
     height: 45px;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 500;
     background-color: var(--blue);
     margin-top: 20px;
     padding: 20px 0;
@@ -111,6 +159,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-bottom: 2em;
+    width: 100%;
+    justify-content: center;
 }
 
 .pageBtn{
@@ -121,9 +172,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    color: white;
-    background-color: var(--light-blue);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+}
+
+.pageBtnPrevNext{
+    padding: 5px;
+    height: 35px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+}
+.pageBtnNext{
+    border-top-right-radius: 0.5em;
+   border-bottom-right-radius: 0.5em;
+}
+.pageBtnPrev{
+   border-top-left-radius: 0.5em;
+   border-bottom-left-radius: 0.5em;
 }
 
 .jobRangeContainer{
@@ -140,9 +211,9 @@
 }
 
 .jobRangeDropdown .dropdown button{
-    background-color: var(--light-blue) !important;
-    color: var(--secondary-text) !important;
-    border: none !important;
+    background-color: transparent !important;
+    color: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
     width: 160px;
     display: flex;
     align-items: center;
@@ -154,14 +225,16 @@
 }
 .jobRangeDropdown .dropdown-menu{
    padding: 20px !important;
-   color: var(--secondary-text);
    line-height: 30px !important;
    border: 1px solid var(--light-blue);
    margin-top: 1% !important;
+   background-color: var(--light-light-blue);
 }
 
 .jobRangeDropdown .dropdown-menu li{
-   font-weight: 100;
+   font-weight: 300;
+   font-size: 0.9em;
+   color: var(--jungle-green);
    cursor: pointer;
    transition: color 0.3s ease-in-out;
  }
@@ -172,37 +245,129 @@
   }
 
   .jobRange{
-    font-weight: 100;
-    font-size: 15px;
-    color: var(--secondary-text);
+    font-weight: 400;
+    font-size: 60%;
+    font-style: italic;
+    color: var(--blue);
+  }
+
+  .scrollToTop{
+    position: fixed;
+    right: 5%;
+    bottom: 2.5%;
+    z-index: 100;
+  }
+
+  .activePage{
+    background-color: var(--blue);
+    color: white;
   }
   
 
   @media screen and (min-width: 320px) and (max-width: 736px) {
     .jobResultsBottom{
         flex-direction: column;
+        padding: 50px 19px;
+        width: 100vw;
+        padding-top: 1em;
+        height: fit-content;
+        display: inline-block;
+        padding-top: 0em;
+
     }
 
     .jobResultsBottomLeft{
         width: 100%;
         background-color: white;
-        top: 0%;
-        padding-top: 15%;
+        padding-top: 0%;
         z-index: 1;
+        top: 12%;
+    }
+
+    .jobRangeDropdown .dropdown-menu li{
+        font-size: 0.7em;
     }
 
     .jobResultsBottomRight{
         width: 100%;
         position: relative;
+        height: fit-content;
+        margin-top: 8em;
+    }
+
+    .jobDuration button{
+        padding: 0.3em;
     }
 
     .jobRangeContainer{
         width: 100%;
         justify-content: space-between;
         position: sticky;
-        top: 42.5%;
-        background-color: white;
+        top: 0%;
+        background-color: rgba(226, 219, 211, 0.5);
         z-index: 2;
-        padding: 3% 0;
+        padding: 3%;
+        border-radius: 6px;
+    }
+
+    .jobRangeDropdown .dropdown button{
+        width: 9em;
+        height: 3em;
+        font-size: 0.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1%;
+    }
+
+
+    .jobRangeDropdown{
+        gap: 10%;
+    }
+
+    .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
+        border: none !important;
+    }
+
+    .formInputResultsContainer{
+        border: none;
+        border-radius: 1.3vh !important;
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .formInputResultsContainer select {
+        width: 90% !important;
+    }
+
+    .jobResultsTopNavTitle{
+        font-size: 1.2em;
+    }
+
+
+
+    .jobResultsTopNav{
+        gap: 0.3%;
+    }
+
+    .jobResultsTopNav p, .jobResultsTopNav a{
+        font-size: 65%;
+    }
+
+    .nojobsPhrase{
+        position: relative !important;
+        width: 100%;
+        border-radius: 1.5em;
+        height: 90vh;
+    }
+
+    #byDefault{
+        display: none !important;
+    }
+
+    .pagination{
+        margin-top: 3.3em;
     }
   }

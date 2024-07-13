@@ -1,5 +1,6 @@
 import React from "react";
 import "./testimonials.css";
+import customIcons from "../../Icons/customIcons";
 
 function Testimonials() {
   const style = {
@@ -9,8 +10,10 @@ function Testimonials() {
 
   return (
     <div
-      id="carouselExampleIndicators"
-      className="carousel slide testimonaialCarousel"
+    id="carouselExampleIndicators"
+    className="carousel slide testimonaialCarousel"
+    data-bs-ride="carousel"
+    data-bs-interval="2000"
     >
       <div className="carousel-indicators testimonyActive">
         <button
@@ -39,32 +42,25 @@ function Testimonials() {
           aria-label="Slide 3"
         ></button>
       </div>
+      <div className="testimonyDiv1">
+        <div className="testimonyDivInner"></div>
+      </div>
       <div className="carousel-inner">
         <div className="carousel-item active testimonyItem">
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-                <p>Testimonials</p>
+               <customIcons.quote className="quote" size={32}/>
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Good morning Lorraine, i hope you well. Following you numerous posts on the remote jobs i have luckily been shortlisted by clipboard health on the...
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">Rare Candidate | Ex JP Morgan Technology Intern</p>
+                <customIcons.waves size={22}/>
+                <p className="userName">Annonymous</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
@@ -73,27 +69,17 @@ function Testimonials() {
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-              <p>Testimonials</p>
+               <customIcons.quote size={32}/>
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Good morning girl, it went well, it was more of a discussion of the wbd document i wrote am waiting for feedback. 👏🏾 😌
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">UI/UX designer</p>
+                <customIcons.waves size={22}/>
+                <p className="userName">Annonymous</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
@@ -102,31 +88,24 @@ function Testimonials() {
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-              <p>Testimonials</p>
+               <customIcons.quote size={32}/>
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Hey there Lorraine, Sooo... I've gotten an invitation to my first interview at Superside.  (Good news, yea?)
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">Data Analyst</p>
+                <customIcons.waves size={22}/>
+                <p className="userName">Annonymous</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="testimonyDiv2">
+        <div className="testimonyDivInner"></div>
       </div>
       <button
         className="carousel-control-prev btnDiasabled"

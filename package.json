@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dg-react-leaflet-cluster": "^2.1.2",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-cluster": "^2.1.0",
+    "react-leaflet-markercluster": "^3.0.0-rc1"
+  }
+}
